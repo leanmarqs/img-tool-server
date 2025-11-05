@@ -1,9 +1,9 @@
-import express from "express";
+import { Router } from "express";
 import { FaviconController } from "../controllers/favicon.controller.js";
 
-const router = express.Router();
-const faviconController = new FaviconController();
+const router = Router();
+const controller = new FaviconController();
 
-router.post("/download", (req, res) => faviconController.download(req, res));
+router.post("/download", (req, res) => controller.download(req, res));
 
 export default router;
